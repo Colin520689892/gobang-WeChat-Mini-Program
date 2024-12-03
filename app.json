@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/board/board"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "gobang",
+    "navigationBarBackgroundColor": "#87CEFA",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

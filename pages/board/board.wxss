@@ -1,0 +1,131 @@
+.bor {
+  height: 700rpx;
+  width: 700rpx;
+  margin: 20rpx auto;
+  padding: 14rpx;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#board {
+  height: 674rpx;
+  width: 674rpx;
+  border: 2rpx solid black;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* #board{ 
+	position: absolute;
+	height: 485rpx;
+	width: 485rpx;
+	border: 2rpx solid black;
+	box-sizing: border-box;
+} */
+
+.bg{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+.colline{
+	width: 2rpx;
+	height: 670rpx;
+	background-color: black;
+	position: absolute;
+}
+.dot{
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  background-color: rgba( 0, 0, 0, 0);
+  position: absolute;
+  z-index: 1;
+}
+.rowline {
+  width: 670rpx;
+  height: 2rpx;
+  background-color: black;
+  position: absolute;
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+/* 设置选择框的样式 */
+.label, .select1 {
+  display: inline-block;
+  vertical-align: middle; /* 对齐方式 */
+}
+
+.label {
+  font-size: 35rpx;
+  margin-right: 10rpx;
+}
+
+.select1 {
+  border: 1px solid black;
+  height: 70rpx;
+  width: 350rpx;
+  line-height: 70rpx;
+  font-size: 35rpx;
+}
+.hide {
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 50%;  /* 垂直方向居中 */
+  left: 50%;  /* 水平方向居中 */
+  transform: translate(-50%, -50%);  /* 精确居中，移动元素的中心点 */
+  z-index: -1;  /* 确保该元素位于其他元素上方 */
+  text-align: center;  /* 水平居中文本 */
+}
+.display {
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 50%;  /* 垂直方向居中 */
+  left: 50%;  /* 水平方向居中 */
+  transform: translate(-50%, -50%);  /* 精确居中，移动元素的中心点 */
+  z-index: 10;  /* 确保该元素位于其他元素上方 */
+  text-align: center;  /* 水平居中文本 */
+}
+
+.picker {
+  font-size: 35rpx;
+  text-align: center;
+}
+
+
+
+.black {
+  background-color: black;
+  z-index: 2;
+}
+.sblack{
+  background-color: black;
+  z-index: 2;
+  border:1rpx solid chartreuse;
+}
+.swhite{
+  background-color: white;
+  z-index: 2;
+  border:1rpx solid chartreuse;
+}
+.white {
+  background-color: white;
+  z-index: 2;
+}
+.blank {
+  opacity: 0;
+}

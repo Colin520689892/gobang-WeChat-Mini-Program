@@ -1,0 +1,43 @@
+<view class="bor">
+  <view class="{{aaa}}">ai正在思考...</view>
+  <image src="../../image/bg.jpg" mode="aspectFill" class="bg"/>
+  <view id="board">
+    <block wx:for="{{dots}}" wx:key="index">
+      <view class="dot {{item.className}}" style="top: {{item.top}}; left: {{item.left}};" data-index="{{index}}"bindtap="xiaqi"></view>
+    </block>
+    <block wx:for="{{rowLines}}" wx:key="index">
+      <view class="rowline" style="top: {{item.top}};"></view>
+    </block>
+    <block wx:for="{{colLines}}" wx:key="index">
+      <view class="colline" style="left: {{item.left}};"></view>
+    </block>
+  </view>
+</view>
+
+<view>
+  <view class="label">选择难度:</view>
+  <view class="select1">
+    <picker mode="selector" range="{{difficultyRange}}" value="{{difficulty}}" bindchange="onDifficultyChange">
+      <view class="picker">
+        {{difficulty}}
+      </view>
+    </picker>
+  </view>
+</view>
+
+
+<!-- 选择先手/后手 -->
+<view class="label">选择先/后手:</view>
+<view class="select1">
+  <picker mode="selector" range="{{playerOrder}}" value="{{playerTurn}}" bindchange="onPlayerOrderChange">
+    <view class="picker">
+      {{playerOrder[playerTurn]}}
+    </view>
+  </picker>
+</view>
+
+
+
+<!-- 悔棋按钮 -->
+<button type="primary" bindtap="takeback">悔棋</button>
+<button id="start" type="primary" bindtap="reset">开始</button>
